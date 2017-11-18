@@ -15,6 +15,8 @@ public class BinaryObserver implements Observer {
         this.subject.addObserver(this);
 
         this.intState = (IntState) subject;
+
+//        this.intState.doUnwantedStuff();
     }
 
     @Override
