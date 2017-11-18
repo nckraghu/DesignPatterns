@@ -7,11 +7,14 @@ package observer;
 @SuppressWarnings("WeakerAccess")
 public class BinaryObserver implements Observer {
 
+    private final IntState intState;
     private Subject subject;
 
     public BinaryObserver(Subject subject) {
         this.subject = subject;
         this.subject.addObserver(this);
+
+        this.intState = (IntState) subject;
     }
 
     @Override
